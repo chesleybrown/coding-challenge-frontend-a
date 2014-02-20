@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:ng="http://angularjs.org">
 	<head>
 		<title>busbud demo</title>
 		<link rel="stylesheet" href="/components/normalize-css/normalize.css">
 		<link rel="stylesheet" href="/css/compiled/site.css">
 		
 		<script src="/components/lodash/dist/lodash.min.js"></script>
-		<script src="/components/jquery/jquery.min.js"></script>
 		<script src="/components/angular/angular.min.js"></script>
-		<script src="/components/angular-route/angular-route.min.js"></script>
 		<script src="/js/compiled/client.js"></script>
+		
+		<!--[if lte IE 8]>
+			<style type="text/css">
+				.form-container { 
+					background-color: #fff;
+				} 
+			</style>
+		<![endif]-->
+		<!--[if lte IE 8]>
+			<script>
+				document.createElement('autocomplete');
+			</script>
+		<![endif]-->
 	</head>
-	<body id="ng-app" ng-app="ngBusbudDemo" ng-cloak>
-		<div class="ng-view"></div>
+	<body>
+		<div id="ng-app" class="ng-app:ngBusbudDemo" ng-controller="AppCtrl">
+			<div class="ng-view"></div>
+		</div>
 	</body>
 </html>

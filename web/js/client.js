@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('ngBusbudDemo', ['ngRoute', 'autocomplete', 'randomclass-directive'])
+var app = angular.module('ngBusbudDemo', ['autocomplete', 'randomclass-directive'])
 	.config(function ($routeProvider, $locationProvider) {
 		$locationProvider
 			.html5Mode(false)
@@ -9,6 +9,7 @@ var app = angular.module('ngBusbudDemo', ['ngRoute', 'autocomplete', 'randomclas
 		
 		$routeProvider
 			.when('/', {controller: 'AppCtrl', templateUrl: '/app.html'})
+			.otherwise({redirectTo: '/'})
 		;
 	})
 	
@@ -62,6 +63,6 @@ var app = angular.module('ngBusbudDemo', ['ngRoute', 'autocomplete', 'randomclas
 		
 		$scope.submit = function() {
 			// TODO: form submit action
-		}
+		};
 	})
 ;

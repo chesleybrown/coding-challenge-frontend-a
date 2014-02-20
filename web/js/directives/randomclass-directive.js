@@ -5,7 +5,7 @@ angular.module('randomclass-directive', [])
 		return {
 			restrict: 'A',
 			scope: {
-				prefix: '@classPrefix',
+				prefix: '=classPrefix',
 				min: '=',
 				max: '='
 			},
